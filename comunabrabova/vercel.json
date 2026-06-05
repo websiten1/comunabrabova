@@ -6,20 +6,19 @@
       "source": "/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
         { "key": "X-XSS-Protection", "value": "1; mode=block" }
       ]
     }
   ],
-  "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/despre-comuna", "dest": "/despre-comuna.html" },
-    { "src": "/primaria", "dest": "/primaria.html" },
-    { "src": "/primarul", "dest": "/primarul.html" },
-    { "src": "/consiliul-local", "dest": "/consiliul-local.html" },
-    { "src": "/servicii-publice", "dest": "/servicii-publice.html" },
-    { "src": "/transparenta", "dest": "/transparenta.html" },
-    { "src": "/anunturi", "dest": "/anunturi.html" },
-    { "src": "/contact", "dest": "/contact.html" }
+  "rewrites": [
+    { "source": "/despre-comuna", "destination": "/despre-comuna.html" },
+    { "source": "/primaria", "destination": "/primaria.html" },
+    { "source": "/primarul", "destination": "/primarul.html" },
+    { "source": "/consiliul-local", "destination": "/consiliul-local.html" },
+    { "source": "/servicii-publice", "destination": "/servicii-publice.html" },
+    { "source": "/transparenta", "destination": "/transparenta.html" },
+    { "source": "/anunturi", "destination": "/anunturi.html" },
+    { "source": "/contact", "destination": "/contact.html" }
   ]
 }

@@ -63,7 +63,7 @@
   /* ----------------------------------------------------------
      Active Nav Link (based on current page)
   ---------------------------------------------------------- */
-  const navLinks = document.querySelectorAll('#main-nav ul li a');
+  const navLinks = document.querySelectorAll('#main-nav li a');
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
   navLinks.forEach(function (link) {

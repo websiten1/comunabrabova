@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Primarul — Primăria Comunei Brabova</title>
+  <meta name="description" content="Informații despre primarul comunei Brabova: profil, mesaj, program audiențe și declarații de avere și interese." />
+  <meta property="og:title" content="Primarul Comunei Brabova" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ro_RO" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .primar-photo-wrap {
+      position: relative;
+    }
+    .primar-badge {
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-blue-dark);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 16px;
+      border-radius: 20px 20px 0 0;
+      white-space: nowrap;
+    }
+    .primar-details-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .primar-details-list li {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--color-grey-border);
+      font-size: 0.92rem;
+    }
+    .primar-details-list li:last-child { border-bottom: none; }
+    .primar-details-list .dl-label {
+      font-weight: 700;
+      color: var(--color-text-sec);
+      min-width: 120px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding-top: 2px;
+    }
+    .primar-details-list .dl-value {
+      color: var(--color-text);
+      font-weight: 500;
+    }
+    .mesaj-card {
+      background: var(--color-grey-light);
+      border: 1px solid var(--color-grey-border);
+      border-left: 5px solid var(--color-gold);
+      border-radius: var(--radius-md);
+      padding: 36px 40px;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--color-text);
+      font-style: italic;
+    }
+    .mesaj-signature {
+      margin-top: 24px;
+      font-style: normal;
+      font-weight: 700;
+      color: var(--color-blue-dark);
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-top">
+    <div class="container">
+      <a href="index.html" class="header-brand" aria-label="Primăria Comunei Brabova — Acasă">
+        <div class="stema" aria-label="Stema României">
+          <svg width="48" height="56" viewBox="0 0 48 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M24 2L46 14V42L24 54L2 42V14L24 2Z" fill="#002B5B" stroke="#C9A227" stroke-width="2"/>
+            <path d="M24 10L38 18V34L24 42L10 34V18L24 10Z" fill="#C9A227"/>
+            <text x="24" y="30" text-anchor="middle" fill="#002B5B" font-size="14" font-weight="bold">RO</text>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Primăria Comunei Brabova</span>
+          <span class="brand-subtitle">Județul Dolj · Administrație Publică Locală</span>
+        </div>
+      </a>
+      <div class="header-contact">
+        <div class="contact-info">
+          <span>📞 <a href="#">[telefon — se completează de Primărie]</a></span>
+          <span>✉️ <a href="#">[email — se completează de Primărie]</a></span>
+        </div>
+        <div class="header-actions">
+          <a href="contact.html" class="btn-header primary">Contact</a>
+          <a href="contact.html#program" class="btn-header">Program</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tricolor-line" aria-hidden="true"><span></span><span></span><span></span></div>
+  <nav class="nav-wrapper" aria-label="Navigare principală">
+    <div class="container" style="display:flex;align-items:center;">
+      <button class="hamburger" id="hamburger-btn" aria-label="Deschide meniul" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="main-nav" role="list">
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="despre-comuna.html">Despre comună</a></li>
+        <li><a href="primaria.html">Primăria</a></li>
+        <li><a href="primarul.html">Primarul</a></li>
+        <li><a href="consiliul-local.html">Consiliul Local</a></li>
+        <li><a href="servicii-publice.html">Servicii publice</a></li>
+        <li><a href="transparenta.html">Transparență</a></li>
+        <li><a href="anunturi.html">Anunțuri</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Acasă</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <a href="primaria.html">Primăria</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Primarul</span>
+      </nav>
+      <h1>Primarul Comunei Brabova</h1>
+      <p class="page-hero-subtitle">Profil, mesaj, program audiențe și declarații oficiale</p>
+    </div>
+  </section>
+
+  <!-- PROFIL PRIMAR -->
+  <section class="section" aria-labelledby="profil-title">
+    <div class="container">
+      <div class="grid-2" style="gap:56px; align-items:start;">
+        <div>
+          <div class="primar-photo-wrap">
+            <div class="img-placeholder large" role="img" aria-label="Fotografie oficială primarul comunei Brabova">
+              <span>👤<br>[fotografie oficială — se adaugă ulterior]<br><small style="color:var(--color-text-sec);">Primarul Comunei Brabova</small></span>
+            </div>
+            <div class="primar-badge">Primar</div>
+          </div>
+        </div>
+        <div>
+          <span class="section-label">Conducere executivă</span>
+          <h2 id="profil-title" style="margin-top:12px;">Primarul Comunei Brabova</h2>
+          <ul class="primar-details-list" style="margin-top:24px;">
+            <li>
+              <span class="dl-label">Nume și prenume</span>
+              <span class="dl-value">[se completează de Primărie]</span>
+            </li>
+            <li>
+              <span class="dl-label">Mandat</span>
+              <span class="dl-value">[se completează de Primărie]</span>
+            </li>
+            <li>
+              <span class="dl-label">Partid politic</span>
+              <span class="dl-value">[se completează de Primărie]</span>
+            </li>
+            <li>
+              <span class="dl-label">Email oficial</span>
+              <span class="dl-value">[se completează de Primărie]</span>
+            </li>
+            <li>
+              <span class="dl-label">Telefon</span>
+              <span class="dl-value">[se completează de Primărie]</span>
+            </li>
+          </ul>
+          <div style="margin-top:24px;">
+            <a href="contact.html" class="btn btn-primary">Contactează Primăria</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MESAJUL PRIMARULUI -->
+  <section class="section section-alt" aria-labelledby="mesaj-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Comunicat oficial</span>
+        <h2 id="mesaj-title">Mesajul primarului</h2>
+      </div>
+      <div style="max-width:800px;">
+        <div class="mesaj-card">
+          <p>[Mesajul primarului către cetățenii comunei Brabova — se completează de Primărie cu un mesaj personal și oficial care prezintă viziunea, angajamentele și prioritățile mandatului.]</p>
+          <p>Subsemnez prin angajamentul față de bunăstarea și dezvoltarea comunei noastre, în interesul tuturor cetățenilor din Brabova, Răchita de Jos, Urdinița, Moșna și Voița.</p>
+          <div class="mesaj-signature">
+            [Semnătura — se completează de Primărie]<br>
+            <span style="font-weight:400; font-size:0.85rem; color:var(--color-text-sec);">Primarul Comunei Brabova</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM AUDIENȚE -->
+  <section class="section" aria-labelledby="audiente-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Audiențe</span>
+        <h2 id="audiente-title">Program audiențe</h2>
+        <p>Primarul Comunei Brabova acordă audiențe cetățenilor conform programului de mai jos.</p>
+      </div>
+      <div style="max-width:600px;">
+        <div class="card" style="border-top:4px solid var(--color-gold);">
+          <span style="font-size:2rem; display:block; margin-bottom:14px;" aria-hidden="true">🗓️</span>
+          <h3 style="margin-bottom:16px;">Audiențe cetățeni</h3>
+          <div style="display:flex; flex-direction:column; gap:10px; font-size:0.9rem;">
+            <div style="display:flex; gap:12px;">
+              <span style="font-weight:700; min-width:90px; color:var(--color-text-sec);">Ziua:</span>
+              <span>[se completează de Primărie]</span>
+            </div>
+            <div style="display:flex; gap:12px;">
+              <span style="font-weight:700; min-width:90px; color:var(--color-text-sec);">Orele:</span>
+              <span>[se completează de Primărie]</span>
+            </div>
+            <div style="display:flex; gap:12px;">
+              <span style="font-weight:700; min-width:90px; color:var(--color-text-sec);">Programare:</span>
+              <span>[se completează de Primărie]</span>
+            </div>
+          </div>
+          <div style="margin-top:20px;">
+            <a href="contact.html" class="btn btn-primary">Solicită audiență</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DECLARAȚII -->
+  <section class="section section-alt" aria-labelledby="decl-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Transparență</span>
+        <h2 id="decl-title">Declarații de avere și interese</h2>
+        <p>Documente publice conform legislației privind transparența în administrația publică.</p>
+      </div>
+      <div style="max-width:760px;">
+        <div class="doc-list">
+          <div class="doc-item">
+            <div>
+              <div class="doc-name">Declarație de avere [an]</div>
+              <div class="doc-date" style="margin-top:4px;">📄 [document oficial — se încarcă ulterior]</div>
+            </div>
+            <a href="#" class="btn-doc">📄 Descarcă</a>
+          </div>
+          <div class="doc-item">
+            <div>
+              <div class="doc-name">Declarație de interese [an]</div>
+              <div class="doc-date" style="margin-top:4px;">📄 [document oficial — se încarcă ulterior]</div>
+            </div>
+            <a href="#" class="btn-doc">📄 Descarcă</a>
+          </div>
+          <div class="doc-item">
+            <div>
+              <div class="doc-name">Declarație de avere [an anterior]</div>
+              <div class="doc-date" style="margin-top:4px;">📄 [document oficial — se încarcă ulterior]</div>
+            </div>
+            <a href="#" class="btn-doc">📄 Descarcă</a>
+          </div>
+        </div>
+        <div class="info-box" style="margin-top:16px;">
+          Declarațiile de avere și de interese se depun anual și sunt publice conform Legii nr. 176/2010 și Legii nr. 144/2007.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner" aria-label="Contact Primăria">
+    <div class="container">
+      <h2>Aveți nevoie de o audiență?</h2>
+      <p>Primarul Comunei Brabova este disponibil pentru cetățeni conform programului de audiențe.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Solicită audiență</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="site-footer" aria-label="Subsol pagină">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand-col">
+        <div class="footer-brand">
+          <div aria-hidden="true">
+            <svg width="44" height="52" viewBox="0 0 48 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 2L46 14V42L24 54L2 42V14L24 2Z" fill="rgba(255,255,255,0.15)" stroke="#C9A227" stroke-width="2"/>
+              <path d="M24 10L38 18V34L24 42L10 34V18L24 10Z" fill="#C9A227" opacity="0.8"/>
+              <text x="24" y="30" text-anchor="middle" fill="white" font-size="14" font-weight="bold">RO</text>
+            </svg>
+          </div>
+          <div class="footer-brand-text">
+            <span class="footer-brand-name">Primăria Comunei Brabova</span>
+            <span class="footer-brand-sub">Județul Dolj</span>
+            <p class="footer-desc">Administrație publică locală în slujba cetățenilor comunei Brabova.</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigare rapidă</h4>
+        <ul>
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="despre-comuna.html">Despre comună</a></li>
+          <li><a href="primaria.html">Primăria</a></li>
+          <li><a href="servicii-publice.html">Servicii publice</a></li>
+          <li><a href="transparenta.html">Transparență</a></li>
+          <li><a href="anunturi.html">Anunțuri</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span>[Adresă], Comuna Brabova, Județul Dolj</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📞</span>
+          <span>[Telefon — se completează de Primărie]</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">✉️</span>
+          <span>[Email — se completează de Primărie]</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p>© 2026 Primăria Comunei Brabova. Website demonstrativ.</p>
+        <p class="demo-note">Acest website este un demo de prezentare. Informațiile marcate cu [se completează de Primărie] trebuie înlocuite cu date oficiale înainte de publicare.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
